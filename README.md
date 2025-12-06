@@ -44,6 +44,7 @@ Tests:
 
 ```shell
 ./test_unit
+../tests/test_integration.sh
 ```
 
 Cleanup:
