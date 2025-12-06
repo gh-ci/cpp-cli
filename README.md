@@ -15,3 +15,34 @@ Set up GitHub actions, variables and secrets:
 - GitHub / Repository / Settings
   - Actions / General
     - Workflow permissions: Read and write permissions
+
+## Development
+
+Install prerequisites:
+
+```shell
+sudo apt update
+sudo apt install build-essential g++ cmake git
+```
+
+Build:
+
+```shell
+mkdir build
+pushd build
+cmake ..
+make
+```
+
+Use:
+
+```shell
+./cpp-cli
+```
+
+Cleanup:
+
+```shell
+popd
+rm -rf build/
+```
