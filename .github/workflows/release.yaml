@@ -15,7 +15,7 @@ jobs:
       issues: write # to be able to comment on released issues
       pull-requests: write # to be able to comment on released pull requests
     outputs:
-      next-version: ${{ steps.semantic-release.next-version }}
+      next-version: ${{ steps.semantic-release.outputs.next-version }}
 
     steps:
       - name: Checkout repository
@@ -45,7 +45,11 @@ jobs:
         id: semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npx semantic-release
+        run: |
+          npx semantic-release
+          VERSION=$(cat VERSION)
+          echo "Next version: $VERSION"
+          echo "next-version=$VERSION" >> $GITHUB_OUTPUT
 
   docker:
     runs-on: ubuntu-latest
