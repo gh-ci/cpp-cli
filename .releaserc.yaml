@@ -14,4 +14,4 @@ plugins:
       - CHANGELOG.md
   - semantic-release-major-tag
   - - "@semantic-release/exec"
-    - prepareCmd: "echo \"next-version=${nextRelease.version}\" >> \"$GITHUB_OUTPUT\""
+    - prepareCmd: "echo ${nextRelease.version} > VERSION"
