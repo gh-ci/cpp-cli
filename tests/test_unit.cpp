@@ -20,5 +20,5 @@ std::string run_app() {
 }
 
 TEST_CASE("Program prints correct output") {
-  REQUIRE(run_app() == "Hello world\n");
+  REQUIRE(run_app() == "Hello demo\n");
 }

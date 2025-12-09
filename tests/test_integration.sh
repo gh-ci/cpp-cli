@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 output=$(./cpp-cli)
-if [[ "$output" == "Hello world" ]]; then
+if [[ "$output" == "Hello demo" ]]; then
     echo "[PASS] Output correct."
 else
     echo "[FAIL] Output = $output"
