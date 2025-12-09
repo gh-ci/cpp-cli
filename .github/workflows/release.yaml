@@ -47,7 +47,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           npx semantic-release
-          VERSION=$(cat VERSION)
+          VERSION=$(cat VERSION || echo "")
           echo "Next version: $VERSION"
           echo "next-version=$VERSION" >> $GITHUB_OUTPUT
 
