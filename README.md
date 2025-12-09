@@ -47,6 +47,12 @@ rm -rf build/
 
 ## Distribution
 
+GitHub organization settings:
+
+- GitHub.com -> _organization_ -> Settings -> Packages -> Packages permissions
+  - Package creation
+    - Public: on
+
 Docker build and run:
 
 ```shell
